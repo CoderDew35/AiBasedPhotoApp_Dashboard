@@ -1,4 +1,4 @@
-// ─── Acquisition Page Data ────────────────────────────────────
+// Acquisition Page Data 
 export const acquisitionMetrics = {
   totalSessions: { value: 124592, trend: '+12.4%', direction: 'up' as const, subtitle: 'vs last period' },
   avgSessionDuration: { value: '04:21', trend: '+0:15', direction: 'up' as const, subtitle: 'vs last period' },
@@ -36,7 +36,51 @@ export const utmCampaigns = [
   { campaign: 'Summer_Sale_Retargeting', source: 'facebook', medium: 'cpc', sessions: 3450, convRate: 1.2, positive: false },
 ];
 
-// ─── Activation Page Data ─────────────────────────────────────
+// SEO & Organic Performance Data
+export const seoMetrics = {
+  searchVisibility: { value: '34.2%', trend: '+4.8%', direction: 'up' as const, subtitle: 'Google SERP visibility' },
+  domainAuthority: { value: '52', trend: '+3', direction: 'up' as const, subtitle: 'Moz DA score' },
+  indexedPages: { value: '1,284', trend: '+142', direction: 'up' as const, subtitle: 'vs last month' },
+  avgPosition: { value: '12.8', trend: '-2.3', direction: 'up' as const, subtitle: 'Improved rank' },
+};
+
+export const coreWebVitals = [
+  { metric: 'LCP', label: 'Largest Contentful Paint', value: 1.8, unit: 's', threshold: 2.5, status: 'Good' as const, color: 'var(--color-tertiary)' },
+  { metric: 'INP', label: 'Interaction to Next Paint', value: 142, unit: 'ms', threshold: 200, status: 'Good' as const, color: 'var(--color-tertiary)' },
+  { metric: 'CLS', label: 'Cumulative Layout Shift', value: 0.04, unit: '', threshold: 0.1, status: 'Good' as const, color: 'var(--color-tertiary)' },
+  { metric: 'FCP', label: 'First Contentful Paint', value: 1.2, unit: 's', threshold: 1.8, status: 'Good' as const, color: 'var(--color-tertiary)' },
+  { metric: 'TTFB', label: 'Time to First Byte', value: 380, unit: 'ms', threshold: 800, status: 'Good' as const, color: 'var(--color-tertiary)' },
+];
+
+export const keywordRankings = [
+  { keyword: 'ai photo enhancer', volume: 33100, position: 3, change: 2, ctr: 12.4, difficulty: 72, intent: 'Commercial' as const },
+  { keyword: 'enhance photo online free', volume: 22400, position: 5, change: -1, ctr: 8.2, difficulty: 65, intent: 'Transactional' as const },
+  { keyword: 'ai video enhancer', volume: 18200, position: 8, change: 5, ctr: 4.1, difficulty: 58, intent: 'Commercial' as const },
+  { keyword: 'upscale image ai', volume: 14800, position: 4, change: 1, ctr: 10.8, difficulty: 61, intent: 'Transactional' as const },
+  { keyword: 'photo denoiser online', volume: 9900, position: 2, change: 3, ctr: 18.5, difficulty: 45, intent: 'Transactional' as const },
+  { keyword: 'ai photo editor web', volume: 8100, position: 11, change: -2, ctr: 2.8, difficulty: 78, intent: 'Informational' as const },
+  { keyword: 'video upscaling software', volume: 6600, position: 14, change: 4, ctr: 1.9, difficulty: 55, intent: 'Commercial' as const },
+  { keyword: 'best ai image enhancement 2026', volume: 4400, position: 6, change: 0, ctr: 6.7, difficulty: 42, intent: 'Informational' as const },
+];
+
+export const organicLandingPages = [
+  { page: '/enhance', sessions: 18420, convRate: 5.2, bounceRate: 38, avgTime: '3:45', topKeyword: 'ai photo enhancer' },
+  { page: '/video-enhance', sessions: 8940, convRate: 3.8, bounceRate: 45, avgTime: '2:58', topKeyword: 'ai video enhancer' },
+  { page: '/pricing', sessions: 6210, convRate: 12.4, bounceRate: 52, avgTime: '1:42', topKeyword: 'photoapp pricing' },
+  { page: '/blog/best-ai-photo-tools', sessions: 4850, convRate: 1.8, bounceRate: 62, avgTime: '4:20', topKeyword: 'best ai photo tools' },
+  { page: '/filters', sessions: 3620, convRate: 4.1, bounceRate: 41, avgTime: '3:12', topKeyword: 'ai photo filters online' },
+];
+
+export const organicTrafficTrend = [
+  { month: 'Jan', sessions: 28000, clicks: 22400 },
+  { month: 'Feb', sessions: 31000, clicks: 24800 },
+  { month: 'Mar', sessions: 35000, clicks: 28000 },
+  { month: 'Apr', sessions: 38500, clicks: 31200 },
+  { month: 'May', sessions: 42000, clicks: 33600 },
+  { month: 'Jun', sessions: 45200, clicks: 36100 },
+];
+
+// Activation Page Data
 export const activationMetrics = {
   activationRate: { value: '68.4%', trend: '+2.1%', direction: 'up' as const, subtitle: '', icon: 'bolt' },
   firstUploadRate: { value: '82.1%', trend: '', direction: 'neutral' as const, subtitle: 'of signups', icon: 'cloud_upload' },
@@ -59,14 +103,14 @@ export const timeToValueData = [
   { range: '> 10m', users: 1200 },
 ];
 
-// ─── Conversion Page Data ─────────────────────────────────────
+// Conversion Page Data
 export const conversionFunnel = [
   { icon: 'login', label: 'Visit', percentage: 100, users: 1245000, color: 'primary', insight: '' },
-  { icon: 'upload_file', label: 'Upload Initiated', percentage: 55, users: 684750, color: 'secondary', insight: '💡 45% drop-off at upload. Consider implementing drag-and-drop UI and pre-upload preview to reduce friction.' },
-  { icon: 'auto_fix_high', label: 'Enhancement Complete', percentage: 44, users: 547800, color: 'tertiary', insight: '💡 11% abandon during processing. Show progress animation and estimated time to reduce perceived wait.' },
-  { icon: 'credit_card', label: 'Paywall Shown', percentage: 30, users: 373500, color: 'primary', insight: '💡 14% leave before seeing paywall. Test moving paywall earlier in the flow (A/B Test #1).' },
-  { icon: 'person_add', label: 'Signup', percentage: 15, users: 186750, color: 'secondary', insight: '💡 15% paywall-to-signup drop. Hypothesis: social proof or limited-time offer could improve conversion.' },
-  { icon: 'workspace_premium', label: 'Export / Pay', percentage: 8, users: 99600, color: 'tertiary', insight: '💡 Final conversion at 8%. Strong for freemium model. Focus optimization on upstream funnel.' },
+  { icon: 'upload_file', label: 'Upload Initiated', percentage: 60, users: 747000, color: 'secondary', insight: '💡 40% drop-off before upload. Healthy if CTA is above the fold — test drag-and-drop UI and pre-upload preview.' },
+  { icon: 'auto_fix_high', label: 'Enhancement Complete', percentage: 45, users: 560250, color: 'tertiary', insight: '💡 Model selection confusion causes 15% abandonment. "Smart Enhance" autopilot mode is the highest-leverage fix (A/B Test #2).' },
+  { icon: 'credit_card', label: 'Paywall Shown', percentage: 30, users: 373500, color: 'primary', insight: '💡 Premature monetization interrupts flow. Delaying paywall to result screen is the single highest-impact intervention (A/B Test #1).' },
+  { icon: 'person_add', label: 'Signup', percentage: 15, users: 186750, color: 'secondary', insight: '💡 Paywall-to-signup at 50%. Test three copy variants: urgency, social proof, and trust-first framing.' },
+  { icon: 'workspace_premium', label: 'Export / Pay', percentage: 8, users: 99600, color: 'tertiary', insight: '💡 8-10% final conversion — recoverable with better framing and post-value gate strategy.' },
 ];
 
 export const conversionMetrics = {
@@ -95,7 +139,7 @@ export const cohortRetentionSummary = {
   d30: { value: '9%', bar: 9 },
 };
 
-// ─── Retention Page Data ──────────────────────────────────────
+// Retention Page Data
 export const retentionMetrics = {
   avgD1: { value: '42%', trend: '+2.4%', direction: 'up' as const },
   avgD30: { value: '12%', trend: '-0.5%', direction: 'down' as const },
@@ -124,7 +168,7 @@ export const retentionTrajectory = [
   { period: 'D30', value: 9 },
 ];
 
-// ─── Revenue Page Data ────────────────────────────────────────
+// Revenue Page Data
 export const revenueMetrics = {
   totalRevYTD: { value: '$1.2M', trend: '+14.2%', direction: 'up' as const, subtitle: 'vs last year' },
   arpu: { value: '$48.20', trend: '+5.8%', direction: 'up' as const, subtitle: 'vs last month' },
@@ -158,7 +202,7 @@ export const revenueByFeature = [
   { feature: 'Storage Upsell', revenue: '$18.2K', percentage: 20, icon: 'cloud_upload', color: 'var(--color-secondary)' },
 ];
 
-// ─── A/B Testing Page Data ────────────────────────────────────
+// A/B Testing Page Data
 export const abTestExperiments = [
   {
     id: 'exp-001',
@@ -187,27 +231,27 @@ export const abTestExperiments = [
   },
   {
     id: 'exp-002',
-    name: 'Video Enhance CTA Copy',
+    name: 'Model Selection UI',
     status: 'Running' as const,
-    hypothesis: 'Benefit-oriented CTA copy ("Upgrade to HD") will outperform feature-oriented copy ("Enhance Video") because users care about outcomes, not processes.',
+    hypothesis: 'Simplifying model selection with a single "Smart Enhance" recommendation will lead to higher completion rates compared to presenting 6 model options upfront. Reducing decision fatigue at this high-friction step directly improves activation.',
     startDate: 'Apr 8, 2026',
     daysRunning: 13,
     traffic: '50/50',
     control: {
-      name: '"Enhance Video"',
-      description: 'Current feature-oriented CTA text',
-      conversion: 12.4,
+      name: '6-Model Grid',
+      description: 'Current UI showing all available models in a grid layout',
+      conversion: 45.2,
       sampleSize: 15800,
     },
     variant: {
-      name: '"Upgrade to HD"',
-      description: 'Benefit-oriented CTA text',
-      conversion: 14.1,
+      name: '"Smart Enhance" Default',
+      description: 'Single CTA with "See all models" disclosure link',
+      conversion: 62.8,
       sampleSize: 15600,
     },
-    lift: '+13.7%',
-    significance: 82.3,
+    lift: '+38.9%',
+    significance: 88.1,
     isSignificant: false,
-    metricName: 'CTA Click-Through Rate',
+    metricName: 'Enhancement Completion Rate',
   },
 ];

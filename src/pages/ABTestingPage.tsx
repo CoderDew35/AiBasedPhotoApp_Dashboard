@@ -81,7 +81,7 @@ export default function ABTestingPage() {
 
       {/* PM Context Callout */}
       <InsightCallout
-        text="💡 These A/B tests address Case Section 4, Questions 4-5: 'What would be your first 2 A/B tests?' — Test 1 targets paywall placement (the largest conversion drop-off in our funnel), and Test 2 targets Video Enhance CTA copy to validate benefit-oriented vs feature-oriented messaging."
+        text="💡 These A/B tests address Case Section 4, Questions 4-5: 'What would be your first 2 A/B tests?' — Test 1 targets paywall placement timing (the largest conversion drop-off in our funnel), and Test 2 targets model selection UI to reduce decision fatigue and improve enhancement completion rates."
       />
 
       {/* Experiment Cards */}

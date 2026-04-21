@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 interface StatusChipProps {
-  status: 'High Growth' | 'Stable' | 'Declining' | 'Running' | 'Completed' | 'Significant' | 'Not Significant';
+  status: 'High Growth' | 'Stable' | 'Declining' | 'Running' | 'Completed' | 'Significant' | 'Not Significant' | 'Good' | 'Needs Work';
 }
 
 const chipStyles: Record<string, string> = {
@@ -12,6 +12,8 @@ const chipStyles: Record<string, string> = {
   'Completed': 'bg-surface-container-highest text-on-surface-variant',
   'Significant': 'bg-tertiary/15 text-tertiary',
   'Not Significant': 'bg-surface-container-highest text-on-surface-variant',
+  'Good': 'bg-tertiary/15 text-tertiary',
+  'Needs Work': 'bg-error/15 text-error',
 };
 
 export default function StatusChip({ status }: StatusChipProps) {
