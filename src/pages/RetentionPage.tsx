@@ -123,7 +123,7 @@ export default function RetentionPage() {
                 />
                 <YAxis hide />
                 <Tooltip
-                  formatter={(value: number) => [`${value}%`, 'Retention']}
+                  formatter={(value) => [`${value}%`, 'Retention']}
                   contentStyle={{
                     backgroundColor: 'var(--surface-container-high)',
                     border: '1px solid var(--outline-variant)',

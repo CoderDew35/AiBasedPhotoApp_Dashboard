@@ -1,5 +1,5 @@
 import {
-  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend,
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell,
 } from 'recharts';
 import MetricCard from '../components/ui/MetricCard';
 import ChartContainer from '../components/ui/ChartContainer';
@@ -172,7 +172,7 @@ export default function AcquisitionPage() {
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(value: number) => [`${value}%`, '']}
+                  formatter={(value) => [`${value}%`, '']}
                   contentStyle={{
                     backgroundColor: 'var(--surface-container-high)',
                     border: '1px solid var(--outline-variant)',

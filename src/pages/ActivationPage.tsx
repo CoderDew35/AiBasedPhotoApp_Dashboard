@@ -136,7 +136,7 @@ export default function ActivationPage() {
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: 'var(--surface-container-highest)', opacity: 0.3 }} />
               <Bar dataKey="users" radius={[2, 2, 0, 0]}>
-                {timeToValueData.map((entry, index) => (
+                {timeToValueData.map((_entry, index) => (
                   <Cell
                     key={index}
                     fill={index === 2 ? 'var(--tertiary)' : 'var(--secondary)'}

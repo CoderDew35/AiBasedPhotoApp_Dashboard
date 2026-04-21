@@ -27,7 +27,6 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 export default function RevenuePage() {
-  const totalActive = planDistribution.reduce((sum, p) => sum + p.value, 0);
 
   return (
     <div className="space-y-8">
@@ -174,7 +173,7 @@ export default function RevenuePage() {
                     ))}
                   </Pie>
                   <Tooltip
-                    formatter={(value: number, name: string) => [`${value}%`, name]}
+                    formatter={(value, name) => [`${value}%`, name]}
                     contentStyle={{
                       backgroundColor: 'var(--surface-container-high)',
                       border: '1px solid var(--outline-variant)',
